@@ -7,9 +7,18 @@ export default class NotesView {
         this.pinnedContainer = document.getElementById('pinned-notes');
         this.unpinnedContainer = document.getElementById('notes-list');
         this.notesContainer = document.getElementById('notes-container');
+        this.placeholderBox = document.getElementById("placeholder-box");
+         this.noteContainer = document.getElementById("note-container");
 
         this.notesContainer.addEventListener('dragover', (e) => e.preventDefault());
         this.notesContainer.addEventListener('drop', (e) => this.onDrop(e));
+
+        if (this.placeholderBox && this.noteContainer) {
+            this.placeholderBox.addEventListener("click", () => {
+                this.placeholderBox.style.display = "none";
+                this.noteContainer.style.display = "block";
+            });
+        }
     }
 
     setEventHandlers(onEdit, onTogglePin, onDragDrop, onMoveToTrash) {

@@ -1,53 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="/src/index.js"></script>
-</head>
-<body>
-    <div class="nav">
-        <div class="navbar"> 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes App</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="/src/index.js"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <div class="navbar"> 
+                <img src="./resources/keepnotes.png" alt=" Logo" class="navbar-logo">
+                <span class="navbar-title">KEEPNOTES</span>
+            </div>
             <div class="navbar__search">
-                <input type="text" class="search-input" placeholder="Search notes...">
+                <input type="text" class="search-input" placeholder="🔍 Search notes...">
             </div>
         </div>
-    </div>
 
-
-    <div class="sidebar">
-        <div class="sidebar-item" id="notes-page">
-            Notes
-        </div>
-        <div class="sidebar-item" id="trash-page">
-             Trash
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="container__notes">
-            <div class="container__textbox" id="note-container">
-                <input type="text" class="container__textbox--title" id="note-title" placeholder="Title">
-                <textarea class="container__textbox--text" id="note-text" placeholder="Take a note..."></textarea>
-                <button class="container__textbox--add" id="add-note">Add Note</button>
+        <div class="sidebar">
+            <div class="sidebar-item" id="notes-page">
+                Notes
             </div>
-            <div id="notes-container">
-                <h2>Pinned</h2>
-                <div id="pinned-notes"></div>
-                <h2>Others</h2>
-                <div id="notes-list"></div>
+            <div class="sidebar-item" id="trash-page">
+                Trash
             </div>
         </div>
-        <div class="container__trash" style="display: none;">
-            <div id="trash-container">
-                <h2>Trash</h2>
-                <div id="trash-list"></div>
+        
+        <div class="container">
+            <div class="container__notes">
+                <div class="container__placeholder" id="placeholder-box">
+                    Take a note...
+                </div>
+        
+                <div class="container__textbox" id="note-container" style="display: none;">
+                    <input type="text" class="container__textbox--title" id="note-title" placeholder="Title">
+                    <textarea class="container__textbox--text" id="note-text" placeholder="Take a note..."></textarea>
+                    <button class="container__textbox--add" id="add-note">Add Note</button>
+                </div>
+        
+                <div class="notes__container" id="notes-container">
+                    <h2 class="notes__container--text">Pinned</h2>
+                    <div id="pinned-notes"></div>
+                    <h2 class="notes__container--text">Others</h2>
+                    <div id="notes-list"></div>
+                </div>
+            </div>
+            <div class="container__trash" style="display: none;">
+                <div id="trash-container">
+                    <h2>Trash</h2>
+                    <div id="trash-list"></div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
 

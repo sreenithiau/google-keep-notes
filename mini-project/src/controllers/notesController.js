@@ -1,4 +1,4 @@
-import { SERVER_URL } from '../../mocks/handlers.js';
+
 
 export default class NotesController {
     constructor(model, view, trashview) {
