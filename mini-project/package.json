@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "author": "prem.kumar@zoomrx.com",
+  "author": "sreenithiarulkumar@zoomrx.com",
   "license": "ISC",
   "dependencies": {
     "msw": "^2.7.0"
