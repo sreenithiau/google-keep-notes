@@ -10,15 +10,13 @@
   },
   "author": "sreenithiarulkumar@zoomrx.com",
   "license": "ISC",
-  "dependencies": {
-    "msw": "^2.7.0"
-  },
   "msw": {
     "workerDirectory": [
       "public"
     ]
   },
   "devDependencies": {
+    "msw": "^2.7.3",
     "vite": "^6.1.0"
   }
 }
